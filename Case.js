@@ -103,7 +103,12 @@ function reViewStaffAscending() {
   const showListStaff = document.getElementById("myTable");
   const showForm = document.getElementById("myFormAddStaff");
 
-  btnReviewStaffAscending.addEventListener("click",)
+  btnReviewStaffAscending.addEventListener("click", () => {
+    showListStaff.style.display = "block";
+  });
+  btnReviewStaffAscending.addEventListener("click", () => {
+    showForm.style.display = "none";
+  });
 }
 
 
