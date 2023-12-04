@@ -70,12 +70,18 @@ function addValueStaff() {
 }
 
 // Sắp xếp danh sách nhân viên tăng dần theo tổng lương
-function reViewStaffAscending() {
+function checkStaffAscending() {
   employees.sort((a, b) => {
     const totalSalaryA = a.CalSalary();
     const totalSalaryB = b.CalSalary();
     return totalSalaryA - totalSalaryB;
   });
+}
+
+// Tìm kiếm những nhân viên có tổng lương cao nhất
+function checkStaffHighestTotalSalary(employees) {
+  const maxSalary = Math.max(...employees.map((employee) => employee.CalSalary()));
+  return employees.filter((employee) => employee.CalSalary() === maxSalary);
 }
 
 // Report Danh Sách Nhân Viên Vừa Được Thêm
@@ -91,4 +97,14 @@ function reViewStaff() {
     showForm.style.display = "none";
   });
 }
+
+function reViewStaffAscending() {
+  const btnReviewStaffAscending = document.getElementById("myButtonReviewAscending");
+  const showListStaff = document.getElementById("myTable");
+  const showForm = document.getElementById("myFormAddStaff");
+
+  btnReviewStaffAscending.addEventListener("click",)
+}
+
+
 
